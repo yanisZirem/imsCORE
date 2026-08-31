@@ -25,7 +25,7 @@ All pixel-level assignments, average spectra, class ratios and significant peaks
 
 ##  Installation
 
-- Download the ZIP file using the following link : [imsCORE Download](https://www.mediafire.com/file/nf15nkbhdzaf73a/imsCORE.zip/file) 
+- Download the ZIP file using the following link : [imsCORE Download](https://nextcloud.univ-lille.fr/index.php/s/DpKdcxjiFWAy9cj) 
 - Once you have the ZIP file extract it
 - Run the .exe file to launch the application
 
