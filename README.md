@@ -1,6 +1,16 @@
-# imsCORE
+<p align="center">
+  <img src="./logo.png" alt="imsCORE logo" width="250"/>
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)](https://www.python.org/) ![Platform](https://img.shields.io/badge/Platform-Windows-green.svg) [![PyQt5](https://img.shields.io/badge/PyQt5-darkorange)](https://pypi.org/project/PyQt5/) [![Pyinstaller](https://img.shields.io/badge/Pyinstaller-purple)](https://pyinstaller.org/en/stable/index.html) [![PyImzml](https://img.shields.io/badge/PyImzml-darkblue)](https://pyimzml.readthedocs.io/en/latest/index.html)
+<h1 align="center">imsCORE</h1>
+
+<p align="center">
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python"/></a>
+  <img src="https://img.shields.io/badge/Platform-Windows-green.svg" alt="Platform"/>
+  <a href="https://pypi.org/project/PyQt5/"><img src="https://img.shields.io/badge/PyQt5-darkorange" alt="PyQt5"/></a>
+  <a href="https://pyinstaller.org/en/stable/index.html"><img src="https://img.shields.io/badge/Pyinstaller-purple" alt="Pyinstaller"/></a>
+  <a href="https://pyimzml.readthedocs.io/en/latest/index.html"><img src="https://img.shields.io/badge/PyImzml-darkblue" alt="PyImzml"/></a>
+</p>
 
 ## 📚 Table of Content
 
@@ -8,10 +18,18 @@
 - [📲 Installation](#-installation)
 - [🔬 A look at each analysis step by step](#-a-look-at-each-analysis-step-by-step)
 - [🚀 Usage](#-usage)
+- [📖 Citation](#-citation)
 
 ## 💬 Description
 
-This project is a graphical user interface for the pipeline provided to me (imsCORE_pipeline.py), which I developed during my time as a trainee. The interface was built using the Python PyQt5 package and then converted into an executable file using PyInstaller. It allows users to analyze data from imzML mass spectrometry files. The analysis is divided into multiple steps, each represented by a dedicated window in the GUI. Once the analysis is complete, results are exported as CSV files. An example CSV file can be found in the CSV folder of this repository.
+imsCORE is a standalone, cross-platform graphical application that packages a complete Mass Spectrometry Imaging (MSI) analysis pipeline — unsupervised segmentation and supervised classification — into a single, no-coding-required interface. It was built to make an analytical workflow originally developed as MATLAB scripts and expert-only notebooks accessible to any user, through a GUI built with PyQt5 and distributed as a standalone executable via PyInstaller.
+
+The application takes one or several raw imzML files as input, bins each pixel spectrum onto a common m/z grid, applies TIC normalisation and removes rare, low-occupancy ions, and automatically derives a tissue mask from the resulting TIC image to restrict analysis to tissue-covered pixels. From there, two analysis modes are available:
+
+- **Segmentation** — spectra are projected by PCA and segmented using a bisecting k-means scheme built on k-means++ initialisation, which recursively splits the most heterogeneous cluster and validates each split with a local silhouette score. This removes the need to fix the target number of clusters in advance: the algorithm refines the segmentation guided by an objective, data-driven stopping criterion. Results include spatial segmentation maps, a UMAP projection for cluster-separation assessment, per-cluster average spectra, and discriminant m/z features identified via the non-parametric Kruskal-Wallis test, rendered as volcano plots, heatmaps and spatial ion maps.
+- **Classification** — a classification model trained elsewhere (for instance within [Profiler](https://github.com/)) is imported as a serialised `.pkl` file and applied pixel-by-pixel to the MSI dataset. Rather than a single hard label, the module computes a per-pixel probability for every class known to the model, rendered as spatially resolved probability maps, and summarises these into global class ratios averaged over all tissue pixels — a quantitative, per-sample estimate of tissue composition comparable across samples.
+
+All pixel-level assignments, average spectra, class ratios and significant peaks are exported as CSV files for downstream statistical or biological interpretation, directly compatible with the Profiler ecosystem. An example CSV file can be found in the CSV folder of this repository.
 
 ## 📲 Installation
 
@@ -197,3 +215,9 @@ After this step is done you can export data as CSV using this menu that will sho
 After the CSV export is done , like Segmentation , there is a final recap that will be shown on screen :
 
 ![ScreenShot](./README_screens/Final_recap_pkl.JPG)
+
+## 📖 Citation
+
+If you use imsCORE in your research, please cite:
+
+> Lagache L, Zirem Y, Le Rhun É, Fournier I, Salzet M. Predicting Protein Pathways Associated to Tumor Heterogeneity by Correlating Spatial Lipidomics and Proteomics: The Dry Proteomic Concept. *Mol Cell Proteomics*. 2025 Jan;24(1):100891. doi: [10.1016/j.mcpro.2024.100891](https://doi.org/10.1016/j.mcpro.2024.100891). Epub 2024 Dec 5. PMID: 39644924; PMCID: PMC11773152.
