@@ -2,7 +2,9 @@
   <img src="./logo.png" alt="imsCORE logo" width="250"/>
 </p>
 
-
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.22208902"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22208902.svg" alt="DOI"/></a>
+</p>
 
 ##  Table of Content
 
@@ -210,7 +212,11 @@ After the CSV export is done , like Segmentation , there is a final recap that w
 
 ##  Citation
 
-If you use imsCORE in your research, please cite:
+If you use imsCORE in your research, please cite the software itself:
+
+> imsCORE. Zenodo. doi: [10.5281/zenodo.22208902](https://doi.org/10.5281/zenodo.22208902)
+
+as well as the related publications:
 
 > Lagache L, Zirem Y, Le Rhun É, Fournier I, Salzet M. Predicting Protein Pathways Associated to Tumor Heterogeneity by Correlating Spatial Lipidomics and Proteomics: The Dry Proteomic Concept. *Mol Cell Proteomics*. 2025 Jan;24(1):100891. doi: [10.1016/j.mcpro.2024.100891](https://doi.org/10.1016/j.mcpro.2024.100891). Epub 2024 Dec 5. PMID: 39644924; PMCID: PMC11773152.
 
