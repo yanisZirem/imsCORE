@@ -2,25 +2,17 @@
   <img src="./logo.png" alt="imsCORE logo" width="250"/>
 </p>
 
-<h1 align="center">imsCORE</h1>
 
-<p align="center">
-  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python"/></a>
-  <img src="https://img.shields.io/badge/Platform-Windows-green.svg" alt="Platform"/>
-  <a href="https://pypi.org/project/PyQt5/"><img src="https://img.shields.io/badge/PyQt5-darkorange" alt="PyQt5"/></a>
-  <a href="https://pyinstaller.org/en/stable/index.html"><img src="https://img.shields.io/badge/Pyinstaller-purple" alt="Pyinstaller"/></a>
-  <a href="https://pyimzml.readthedocs.io/en/latest/index.html"><img src="https://img.shields.io/badge/PyImzml-darkblue" alt="PyImzml"/></a>
-</p>
 
-## 📚 Table of Content
+##  Table of Content
 
-- [💬 Description](#-description)
-- [📲 Installation](#-installation)
-- [🔬 A look at each analysis step by step](#-a-look-at-each-analysis-step-by-step)
-- [🚀 Usage](#-usage)
-- [📖 Citation](#-citation)
+- [ Description](#-description)
+- [ Installation](#-installation)
+- [ A look at each analysis step by step](#-a-look-at-each-analysis-step-by-step)
+- [ Usage](#-usage)
+- [ Citation](#-citation)
 
-## 💬 Description
+##  Description
 
 imsCORE is a standalone, cross-platform graphical application that packages a complete Mass Spectrometry Imaging (MSI) analysis pipeline — unsupervised segmentation and supervised classification — into a single, no-coding-required interface. It was built to make an analytical workflow originally developed as MATLAB scripts and expert-only notebooks accessible to any user, through a GUI built with PyQt5 and distributed as a standalone executable via PyInstaller.
 
@@ -31,14 +23,14 @@ The application takes one or several raw imzML files as input, bins each pixel s
 
 All pixel-level assignments, average spectra, class ratios and significant peaks are exported as CSV files for downstream statistical or biological interpretation, directly compatible with the Profiler ecosystem. An example CSV file can be found in the CSV folder of this repository.
 
-## 📲 Installation
+##  Installation
 
 - Download the ZIP file using the following link : [imsCORE Download](https://www.mediafire.com/file/nf15nkbhdzaf73a/imsCORE.zip/file) 
 - Once you have the ZIP file extract it
 - Run the .exe file to launch the application
 
 
-## 🔬 A look at each analysis step by step
+##  A look at each analysis step by step
 
 There are currently two types of analysis:
 
@@ -83,7 +75,7 @@ Once these are done, the rest of the analysis changes depending on the chosen an
 
 4 - Label ratios are calculated using the pkl file 
 
-## 🚀 Usage
+##  Usage
 
 To use this program, you need one imZML file (or two if you want to run multi-sample analysis). Additionally, you can choose to load a model file (.pkl) for different analyses (please refer to the [🔬 A look at each analysis step by step](#-a-look-at-each-analysis-step-by-step) section for further detail). Boot up the app (.exe) and select the imZML file using the GUI. Then, you can play with the settings before starting the analysis. I'm going to show you some examples of how this program works for each analysis using an imzML file of a rat brain.
 
@@ -216,7 +208,7 @@ After the CSV export is done , like Segmentation , there is a final recap that w
 
 ![ScreenShot](./README_screens/Final_recap_pkl.JPG)
 
-## 📖 Citation
+##  Citation
 
 If you use imsCORE in your research, please cite:
 
