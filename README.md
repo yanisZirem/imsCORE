@@ -6,15 +6,15 @@
   <a href="https://doi.org/10.5281/zenodo.22208902"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22208902.svg" alt="DOI"/></a>
 </p>
 
-##  Table of Content
+## Table of Content
 
-- [ Description](#-description)
-- [ Installation](#-installation)
-- [ A look at each analysis step by step](#-a-look-at-each-analysis-step-by-step)
-- [ Usage](#-usage)
-- [ Citation](#-citation)
+- [Description](#description)
+- [Installation](#installation)
+- [A look at each analysis step by step](#a-look-at-each-analysis-step-by-step)
+- [Usage](#usage)
+- [Citation](#citation)
 
-##  Description
+## Description
 
 imsCORE is a standalone, cross-platform graphical application that packages a complete Mass Spectrometry Imaging (MSI) analysis pipeline — unsupervised segmentation and supervised classification — into a single, no-coding-required interface. It was built to make an analytical workflow originally developed as MATLAB scripts and expert-only notebooks accessible to any user, through a GUI built with PyQt5 and distributed as a standalone executable via PyInstaller.
 
@@ -29,14 +29,14 @@ All pixel-level assignments, average spectra, class ratios and significant peaks
   <img src="./imsCORE_pipeline.png" alt="imsCORE pipeline overview" width="800"/>
 </p>
 
-##  Installation
+## Installation
 
 - Download the ZIP file using the following link : [imsCORE Download](https://nextcloud.univ-lille.fr/index.php/s/DpKdcxjiFWAy9cj) 
 - Once you have the ZIP file extract it
 - Run the .exe file to launch the application
 
 
-##  A look at each analysis step by step
+## A look at each analysis step by step
 
 There are currently two types of analysis:
 
@@ -81,7 +81,7 @@ Once these are done, the rest of the analysis changes depending on the chosen an
 
 4 - Label ratios are calculated using the pkl file 
 
-##  Usage
+## Usage
 
 To use this program, you need one imZML file (or two if you want to run multi-sample analysis). Additionally, you can choose to load a model file (.pkl) for different analyses (please refer to the [🔬 A look at each analysis step by step](#-a-look-at-each-analysis-step-by-step) section for further detail). Boot up the app (.exe) and select the imZML file using the GUI. Then, you can play with the settings before starting the analysis. I'm going to show you some examples of how this program works for each analysis using an imzML file of a rat brain.
 
@@ -214,7 +214,7 @@ After the CSV export is done , like Segmentation , there is a final recap that w
 
 ![ScreenShot](./README_screens/Final_recap_pkl.JPG)
 
-##  Citation
+## Citation
 
 If you use imsCORE in your research, please cite the software itself:
 
