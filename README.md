@@ -25,6 +25,10 @@ The application takes one or several raw imzML files as input, bins each pixel s
 
 All pixel-level assignments, average spectra, class ratios and significant peaks are exported as CSV files for downstream statistical or biological interpretation, directly compatible with the Profiler ecosystem. An example CSV file can be found in the CSV folder of this repository.
 
+<p align="center">
+  <img src="./imsCORE_pipeline.png" alt="imsCORE pipeline overview" width="800"/>
+</p>
+
 ##  Installation
 
 - Download the ZIP file using the following link : [imsCORE Download](https://nextcloud.univ-lille.fr/index.php/s/DpKdcxjiFWAy9cj) 
